@@ -40,7 +40,6 @@ class JurusanController extends Controller
         $this->validate($request, [
             'kode' => 'required',
             'nama' => 'required',
-            'keterangan' => 'required'
         ]);
 
         $jurusan = new Jurusan;
@@ -50,7 +49,7 @@ class JurusanController extends Controller
 
         $jurusan->save();
 
-        return redirect('jurusan', compact('message','Data Guru Sudah ditambahkan'));
+        return view('jurusan.index', compact('message','Data Jurusan Sudah ditambahkan'));
     }
 
     /**
