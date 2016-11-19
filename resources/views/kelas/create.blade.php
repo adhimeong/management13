@@ -7,16 +7,17 @@
     </ul>
 @endif
 
-<h3>Tambah Kelas</h3>
+<h3>Tambah Kelas</h3> <br>
 
+<a href="/kelas">Kembali</a> <br>
 
 <form action="/kelas" method="POST">
 	Tingkat : <br>
 	<select name="tingkat">
-		<option value="1">X -- (tahun pertama)</option>
-		<option value="2">XI -- (tahun kedua)</option>
-		<option value="3">XII -- (tahun ketiga)</option>
-		<option value="4">IV -- (tahun keempat)</option>	
+		<option value="X">X -- (tahun pertama)</option>
+		<option value="XI">XI -- (tahun kedua)</option>
+		<option value="XII">XII -- (tahun ketiga)</option>
+		<option value="IV">IV -- (tahun keempat)</option>	
 	</select> <br>
 
 	Jurusan : <br>

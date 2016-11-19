@@ -8,4 +8,9 @@ class Jurusan extends Model
 {
     
     protected $table = 'jurusan';
+
+    public function kelas(){
+
+    	return $this->hasMany('App\Kelas');
+    }
 }

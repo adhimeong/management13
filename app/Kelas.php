@@ -9,8 +9,8 @@ class Kelas extends Model
     //
     protected $table = 'kelas';
 
-    public function Jurusan(){
+    public function jurusan(){
 
-    	return $this->hasMany('App\Jurusan');
+    	return $this->belongsTo('App\Jurusan');
     } 
 }

@@ -15,7 +15,7 @@ class CreateKelasTable extends Migration
     {
         Schema::create('kelas', function (Blueprint $table) {
             $table->increments('id');
-            $table->smallInteger('tingkat', 5);
+            $table->char('tingkat', 5);
             $table->unsignedInteger('jurusan_id')->nullable();
             $table->foreign('jurusan_id')->references('id')->on('jurusan');
             $table->smallInteger('rombel');

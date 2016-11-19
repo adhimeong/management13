@@ -16,7 +16,7 @@ class KelasController extends Controller
      */
     public function index()
     {
-        $kelas = Kelas::all();
+        $kelas = Kelas::paginate(10);
         return view('kelas.index', compact('kelas', $kelas)); 
     }
 
@@ -67,6 +67,12 @@ class KelasController extends Controller
     public function show($id)
     {
         //
+        $kelas = Kelas::find($id);
+        if (!$kelas) {
+            abort(404);
+        }
+
+        return view('kelas.detail',compact('kelas', $kelas));   
     }
 
     /**
@@ -78,6 +84,10 @@ class KelasController extends Controller
     public function edit($id)
     {
         //
+        $kelas = Kelas::find($id);
+        $jurusan = Jurusan::all();
+
+        return view('kelas.edit',compact(['kelas', $kelas],['jurusan', $jurusan])); 
     }
 
     /**
@@ -89,7 +99,21 @@ class KelasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //proses validasi
+        $this->validate($request, [
+            'rombel' => 'required',
+            'jurusan' => 'required',
+            'tingkat' => 'required',
+        ]);
+
+        $kelas = Kelas::find($id);
+        $kelas->tingkat = $request->tingkat;
+        $kelas->jurusan_id = $request->jurusan;
+        $kelas->rombel = $request->rombel;
+
+        $kelas->save();
+
+        return redirect('kelas')->with('message','Data Kelas Sudah diupdate');
     }
 
     /**

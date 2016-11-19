@@ -6,9 +6,7 @@
 
 @foreach($kelas as $data)
 
-	<p>{{ $data->tingkat }}</p> <br>
-	<p>{{ $data->jurusan_id }}</p> <br>
-	<p>{{ $data->rombel }}</p> <br>
+	<p>{{ $data->tingkat }} - {{ $data->jurusan->nama_jurusan }} - {{ $data->rombel }}</p> <br>
 	<a href="/kelas/{{ $data->id }}">detail</a>
 	<a href="/kelas/{{ $data->id }}/edit">edit</a>
 	<form action="/kelas/{{$data->id}}" method="POST">
@@ -18,3 +16,5 @@
     </form>
 	<hr>
 @endforeach
+
+{!! $kelas->links() !!}
