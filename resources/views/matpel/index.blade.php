@@ -24,3 +24,5 @@
     </form>
 	<hr>
 @endforeach
+
+{!! $matpel->links() !!}

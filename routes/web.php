@@ -20,6 +20,7 @@ Route::resource('guru', 'GuruController');
 Route::resource('jurusan', 'JurusanController');
 Route::resource('kelas', 'KelasController');
 Route::resource('matpel', 'MatpelController');
+Route::resource('jampel', 'JampelController');
 
 Auth::routes();
 

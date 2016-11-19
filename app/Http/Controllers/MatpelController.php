@@ -16,7 +16,7 @@ class MatpelController extends Controller
      */
     public function index()
     {
-        $matpel = Matpel::all();
+        $matpel = Matpel::paginate(10);
 
         return view('matpel.index', compact('matpel', $matpel));
     }
