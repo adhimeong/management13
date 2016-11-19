@@ -13,4 +13,8 @@ class Jurusan extends Model
 
     	return $this->hasMany('App\Kelas');
     }
+
+    public function matpel(){
+    	return $this->hasMany('App\Matpel');
+    }
 }

@@ -19,8 +19,8 @@ Route::get('/', function () {
 Route::resource('guru', 'GuruController');
 Route::resource('jurusan', 'JurusanController');
 Route::resource('kelas', 'KelasController');
-Route::get('cari', 'PresensiController@search');
-Route::get('presensi', 'PresensiController@index');
+Route::resource('matpel', 'MatpelController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Kelas;
+use App\Matpel;
 use App\Jurusan;
 use App\Http\Requests;
 
-class KelasController extends Controller
+class MatpelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,9 @@ class KelasController extends Controller
      */
     public function index()
     {
-        $kelas = Kelas::paginate(10);
-        return view('kelas.index', compact('kelas', $kelas)); 
+        $matpel = Matpel::all();
+
+        return view('matpel.index', compact('matpel', $matpel));
     }
 
     /**
@@ -27,10 +28,9 @@ class KelasController extends Controller
      */
     public function create()
     {
-        //
         $jurusan = Jurusan::all();
 
-        return view('kelas.create',compact('jurusan', $jurusan));
+        return view('matpel.create',compact('jurusan', $jurusan));
     }
 
     /**
@@ -41,21 +41,21 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
-        //proses validasi
+         //proses validasi
         $this->validate($request, [
-            'rombel' => 'required',
+            'nama' => 'required',
+            'jenis' => 'required',
             'jurusan' => 'required',
-            'tingkat' => 'required',
         ]);
 
-        $kelas = new Kelas;
-        $kelas->tingkat = $request->tingkat;
-        $kelas->jurusan_id = $request->jurusan;
-        $kelas->rombel = $request->rombel;
+        $matpel = new Matpel;
+        $matpel->nama_pelajaran = $request->nama;
+        $matpel->jenis_pelajaran = $request->jenis;
+        $matpel->jurusan_id = $request->jurusan;
 
-        $kelas->save();
+        $matpel->save();
 
-        return redirect('kelas')->with('message','Data Kelas Sudah ditambah');
+        return redirect('matpel')->with('message','Data Mata Pelajaran Sudah ditambah');
     }
 
     /**
@@ -66,13 +66,9 @@ class KelasController extends Controller
      */
     public function show($id)
     {
-        //
-        $kelas = Kelas::find($id);
-        if (!$kelas) {
-            abort(404);
-        }
+        $matpel = Matpel::find($id);
 
-        return view('kelas.detail',compact('kelas', $kelas));   
+        return view('matpel.detail', compact('matpel', $matpel));
     }
 
     /**
@@ -83,11 +79,10 @@ class KelasController extends Controller
      */
     public function edit($id)
     {
-        //
-        $kelas = Kelas::find($id);
+        $matpel = Matpel::find($id);
         $jurusan = Jurusan::all();
 
-        return view('kelas.edit',compact(['kelas', $kelas],['jurusan', $jurusan])); 
+        return view('matpel.edit', compact(['matpel', $matpel],['jurusan', $jurusan]));
     }
 
     /**
@@ -101,19 +96,19 @@ class KelasController extends Controller
     {
         //proses validasi
         $this->validate($request, [
-            'rombel' => 'required',
+            'nama' => 'required',
+            'jenis' => 'required',
             'jurusan' => 'required',
-            'tingkat' => 'required',
         ]);
 
-        $kelas = Kelas::find($id);
-        $kelas->tingkat = $request->tingkat;
-        $kelas->jurusan_id = $request->jurusan;
-        $kelas->rombel = $request->rombel;
+        $matpel = Matpel::find($id);
+        $matpel->nama_pelajaran = $request->nama;
+        $matpel->jenis_pelajaran = $request->jenis;
+        $matpel->jurusan_id = $request->jurusan;
 
-        $kelas->save();
+        $matpel->save();
 
-        return redirect('kelas')->with('message','Data Kelas Sudah diupdate');
+        return redirect('matpel')->with('message','Data Mata Pelajaran Sudah diupdate');
     }
 
     /**
@@ -124,8 +119,8 @@ class KelasController extends Controller
      */
     public function destroy($id)
     {
-        $kelas = Kelas::find($id);
-        $kelas->delete();
-        return redirect('kelas')->with('message','Data Kelas Sudah dihapus');
+        $matpel = Matpel::find($id);
+        $matpel->delete();
+        return redirect('matpel')->with('message','Data Mata Pelajaran Sudah dihapus');
     }
 }

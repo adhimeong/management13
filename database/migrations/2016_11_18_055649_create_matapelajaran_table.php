@@ -16,7 +16,9 @@ class CreateMatapelajaranTable extends Migration
         Schema::create('matpel', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_pelajaran');
-            $table->string('ketarangan');
+            $table->enum('jenis_pelajaran', ['Normatif', 'Adaptif', 'Produktif', 'Mulok']);
+            $table->unsignedInteger('jurusan_id')->nullable();
+            $table->foreign('jurusan_id')->references('id')->on('jurusan');
             $table->timestamps();
         });
     }
