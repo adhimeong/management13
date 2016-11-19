@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Kelas;
+use App\Jurusan;
 use App\Http\Requests;
 
 class KelasController extends Controller
@@ -27,7 +28,9 @@ class KelasController extends Controller
     public function create()
     {
         //
-        return view('kelas.create');
+        $jurusan = Jurusan::all();
+
+        return view('kelas.create',compact('jurusan', $jurusan));
     }
 
     /**
@@ -38,7 +41,21 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //proses validasi
+        $this->validate($request, [
+            'rombel' => 'required',
+            'jurusan' => 'required',
+            'tingkat' => 'required',
+        ]);
+
+        $kelas = new Kelas;
+        $kelas->tingkat = $request->tingkat;
+        $kelas->jurusan_id = $request->jurusan;
+        $kelas->rombel = $request->rombel;
+
+        $kelas->save();
+
+        return redirect('kelas')->with('message','Data Kelas Sudah ditambah');
     }
 
     /**

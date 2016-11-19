@@ -2,7 +2,7 @@
 
 <h3>List Jurusan</h3>
 
-<a href="/jurusan/create">Tambah Jurusan</a>
+<a href="/jurusan/create">Tambah Jurusan</a> <br>
 
 @foreach($jurusan as $data)
 

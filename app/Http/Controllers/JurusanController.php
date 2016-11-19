@@ -49,7 +49,7 @@ class JurusanController extends Controller
 
         $jurusan->save();
 
-        return view('jurusan.index', compact('message','Data Jurusan Sudah ditambahkan'));
+        return redirect('jurusan')->with('message','Data Jurusan Sudah ditambah');
     }
 
     /**
@@ -108,7 +108,7 @@ class JurusanController extends Controller
 
         $jurusan->save();
 
-        return redirect('jurusan', compact('message','Data Guru Sudah diedit'));
+        return redirect('jurusan')->with('message','Data Jurusan Sudah diupdate');
     }
 
     /**
@@ -122,7 +122,7 @@ class JurusanController extends Controller
         $jurusan = Jurusan::find($id);
         $jurusan->delete();
 
-        return redirect('jurusan', compact('message','Data Guru Sudah dihapus'));
+        return redirect('jurusan')->with('message','Data Jurusan Sudah dihapus');
 
     }
 }
