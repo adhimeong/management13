@@ -47,5 +47,5 @@ $rombelpil = $kelas->rombel;
 	</select> <br>
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<input type="hidden" name="_method" value="PUT">
-	<input type="submit" value="kIRIM">
+	<input type="submit" value="KIRIM">
 </form>

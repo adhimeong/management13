@@ -14,10 +14,10 @@
 <form action="/jampel" method="POST">
 	Jam Pelajaran Ke : <br>
 	<input type="text" name="jam"> <br>
-	Awal Jam Pelajawan : <br>
+	Awal Jam Pelajaran : <br>
 	<input type="text" name="awal"> <i>dalam waktu</i> <br>
-	Akhir Jam Pelajawan : <br>
+	Akhir Jam Pelajaran : <br>
 	<input type="text" name="akhir"> <i>dalam waktu</i> <br>
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
-	<input type="submit" value="kIRIM">
+	<input type="submit" value="KIRIM">
 </form>

@@ -41,5 +41,5 @@
 		<option value="10"> SEPULUH </option>	
 	</select> <br>
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
-	<input type="submit" value="kIRIM">
+	<input type="submit" value="KIRIM">
 </form>

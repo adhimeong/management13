@@ -9,5 +9,5 @@
 	<textarea name="keterangan" cols="30" rows="10">{{ $jurusan->keterangan }}</textarea><br>
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<input type="hidden" name="_method" value="PUT">
-	<input type="submit" value="kIRIM">
+	<input type="submit" value="KIRIM">
 </form>

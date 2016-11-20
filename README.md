@@ -16,6 +16,8 @@ Tahapan serta fitur yang dikerjakan dalam tahap awal aplikasi ini meliputi :
 </ul>
 
 
+Aplikasi ini merupakan aplikasi inti yang mengatur data dasar untuk aplikasi pendukung lainnya..
+
 <h5>Sebuah Harapan besar jika aplikasi ini digunakan dan bermanfaat untuk poses pendidikan yang lebih baik lagi</h5>
 
 

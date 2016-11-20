@@ -20,5 +20,5 @@
 	<input type="text" name="akhir" value="{{ $jampel->akhir }}"> <i>dalam waktu</i> <br>
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<input type="hidden" name="_method" value="PUT">
-	<input type="submit" value="kIRIM">
+	<input type="submit" value="KIRIM">
 </form>
