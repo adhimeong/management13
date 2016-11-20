@@ -1,5 +1,7 @@
 {{ Session::get('message') }}
 
+<a href="/">MENU UTAMA</a> <br>
+
 <h3>List Mata Pelajaran</h3>
 
 <a href="/matpel/create">Tambah Mata Pelajaran</a> <br>

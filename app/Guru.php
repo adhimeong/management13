@@ -8,4 +8,9 @@ class Guru extends Model
 {
     //
     protected $table = 'guru';
+
+    public function jabatan(){
+
+    	return $this->belongsTo('App\Jabatan');
+    }
 }

@@ -1,12 +1,13 @@
 {{ Session::get('message') }}
 
+<a href="/">MENU UTAMA</a> <br>
 
 <h3>List Guru </h3>
 
 <a href="/guru/create">Tambah Guru</a> <br>
 
 @foreach ($guru as $data)
-    <img src="image/{{ $data->photo}}" style="width: 150px;">
+    <img src="image/{{ $data->photo}}" style="width: 120px;">
     <p>Nama : {{ $data->nama }}</p>
     <p>NIP : {{ $data->nip }}</p>
     <p>Status Kepegawaian : {{ $data->status }}</p>

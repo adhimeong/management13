@@ -16,7 +16,7 @@ class GuruController extends Controller
     public function index()
     {
 
-        $listguru = Guru::paginate(2);
+        $listguru = Guru::paginate(10);
 
         return view('guru.index', ['guru' => $listguru]);
     }

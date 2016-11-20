@@ -1,5 +1,7 @@
 {{ Session::get('message') }}
 
+<a href="/">MENU UTAMA</a> <br>
+
 <h3>List Kelas</h3>
 
 <a href="/kelas/create">Tambah Kelas</a>

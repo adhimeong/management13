@@ -22,6 +22,7 @@ Route::resource('kelas', 'KelasController');
 Route::resource('matpel', 'MatpelController');
 Route::resource('jampel', 'JampelController');
 Route::resource('jadwalpel', 'JadwalpelController');
+Route::resource('jabatan', 'JabatanController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

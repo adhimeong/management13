@@ -75,15 +75,16 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    SMKN 13 BANDUNG
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/guru">Guru</a>
+                    <a href="/matpel">Mata Pelajaran</a>
+                    <a href="/jadwalpel">Jadwal Pelajaran</a>
+                    <a href="/kelas">Kelas</a>
+                    <a href="/jurusan">Jurusan</a>
+                    <a href="/jampel">Jam Pelajaran</a>
                 </div>
             </div>
         </div>
