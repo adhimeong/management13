@@ -85,6 +85,10 @@
                     <a href="/kelas">Kelas</a>
                     <a href="/jurusan">Jurusan</a>
                     <a href="/jampel">Jam Pelajaran</a>
+                    <a href="/jabatan">Jabatan</a>
+                </div>
+                <div class="links">
+                    <a href="/absenguru">Absen Guru & Pegawai</a>
                 </div>
             </div>
         </div>

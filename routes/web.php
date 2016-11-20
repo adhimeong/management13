@@ -23,6 +23,7 @@ Route::resource('matpel', 'MatpelController');
 Route::resource('jampel', 'JampelController');
 Route::resource('jadwalpel', 'JadwalpelController');
 Route::resource('jabatan', 'JabatanController');
+Route::resource('absenguru', 'AbsenguruController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
