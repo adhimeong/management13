@@ -22,7 +22,7 @@
   <header id="header" class="page-topbar">
         <!-- start header nav-->
         <div class="navbar-fixed">
-            <nav class="navbar light-blue darken-3">
+            <nav class="navbar light-blue darken-2">
                 <div class="nav-wrapper">
                     <ul class="left">                      
                       <li ><div class="logo-wrapper" ><span class="brand-logo" style="font-style: bold; font-size: 22px;">SMKN 13 BANDUNG</span></div></li>
@@ -49,7 +49,7 @@
       <aside id="left-sidebar-nav">
         <ul id="slide-out" class="side-nav fixed leftside-navigation">
 
-            <li class="user-details light-blue darken-1">
+            <li class="user-details red ">
             <div class="row">
                 <div class="col col s4 m4 l4">
                     <img src="{{ asset('images/avatar.jpg ')}}" alt="" class="circle responsive-img valign profile-image">
@@ -123,11 +123,33 @@
   <!-- //////////////////////////////////////////////////////////////////////////// -->
 
   <!-- START FOOTER -->
-  <footer class="page-footer light-blue">
-    <div class="footer-copyright">
-      <div class="container right">
-        <span>2016 <a class="grey-text text-lighten-4" href="#" target="_blank">SMKN 13 Bandung</a></span>
+  <footer class="page-footer light-blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">SMKN 13 BANDUNG</h5>
+          <p class="grey-text text-lighten-4">Sekolah Menengah Kejuruan Negeri 13 Bandung adalah sekolah tingkat menengah yang mendidik siswanya untuk memiliki keahlian di bidang Analisis Kimia, Teknik Komputer Jaringan dan Rekayasa Perangkat Lunak.</p>
+
+
         </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Alamat</h5>
+          <p class="grey-text text-lighten-4">Jl. Soekarno Hatta No.Km.10, Jatisari, Buahbatu, Kota Bandung, Jawa Barat 40286</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Kontak</h5>
+          <ul>
+            <li><p class="grey-text text-lighten-4">(022) 7318960</p></li>
+            <li><p class="grey-text text-lighten-4">admin@smkn-13bdg.sch.id</p></li>
+            <li><p class="grey-text text-lighten-4">https://smkn-13bdg.sch.id</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://facebook/adhimeong">adhimeong</a>
+      </div>
     </div>
   </footer>
   <!-- END FOOTER -->

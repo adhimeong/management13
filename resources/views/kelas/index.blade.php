@@ -4,24 +4,38 @@
 
 {{ Session::get('message') }}
 
-<a href="/">MENU UTAMA</a> <br>
 
 <h3>List Kelas</h3>
 
-<a href="/kelas/create">Tambah Kelas</a>
+<a href="/kelas/create" class="btn waves-effect waves-light red">Tambah Kelas</a><br><br><br>
 
-@foreach($kelas as $data)
+<div class="col s8 m6">
+	<div class="container">
+		<table class="bordered striped">
+		<tr>
+			<th>Kelas</th>
+			<th>Jurusan</th>
+			<th>Aksi</th>
+		</tr>
 
-	<p>{{ $data->tingkat }} - {{ $data->jurusan->nama_jurusan }} - {{ $data->rombel }}</p> <br>
-	<a href="/kelas/{{ $data->id }}">detail</a>
-	<a href="/kelas/{{ $data->id }}/edit">edit</a>
-	<form action="/kelas/{{$data->id}}" method="POST">
-    	<input type="hidden" name="_token" value="{{ csrf_token() }}">
-		<input type="hidden" name="_method" value="DELETE">
-		<input type="submit" value="delete">
-    </form>
-	<hr>
-@endforeach
+		@foreach($kelas as $data)
+		<tr>
+			<td>{{ $data->tingkat }} - {{ $data->jurusan->nama_jurusan }} - {{ $data->rombel }}</td>
+			<td>{{ $data->jurusan->nama_jurusan }}</td>
+			<td>
+				<form action="/kelas/{{$data->id}}" method="POST">
+					<a href="/kelas/{{ $data->id }}" class="btn waves-effect waves-light green">detail</a>
+					<a href="/kelas/{{ $data->id }}/edit" class="btn waves-effect waves-light orange">edit</a>
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="_method" value="DELETE">
+					<button class="btn waves-effect waves-light red" type="submit" onclick="return confirm('Anda yakin menghapus data');" >Delete</button>
+				</form>
+		    </td>
+		<tr>
+		@endforeach
+		</table>	
+	</div>
+</div>
 
 {!! $kelas->links() !!}
 
