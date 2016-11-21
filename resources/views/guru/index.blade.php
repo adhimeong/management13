@@ -1,3 +1,8 @@
+@extends('themes.template')
+
+@section('content')
+
+
 {{ Session::get('message') }}
 
 <a href="/">MENU UTAMA</a> <br>
@@ -25,3 +30,6 @@
 @endforeach
 
 {!! $guru->links() !!}
+
+
+@stop

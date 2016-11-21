@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 {{ Session::get('message') }}
 
 <a href="/">MENU UTAMA</a> <br>
@@ -26,3 +30,5 @@
 @endforeach
 
 {!! $jadwalpel->links() !!}
+
+@stop

@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 <h3>detail Jadwal Pelajaran</h3>
 
 <a href="/jadwalpel">Kembali</a> <br>
@@ -14,3 +18,5 @@
 	<input type="hidden" name="_method" value="DELETE">
 	<input type="submit" value="delete">
 </form>
+
+@stop

@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 @if (count($errors) > 0)
     <ul>
         @foreach ($errors->all() as $error)
@@ -34,3 +38,5 @@
 	<input type="hidden" name="_method" value="PUT">
 	<input type="submit" value="KIRIM">
 </form>
+
+@stop

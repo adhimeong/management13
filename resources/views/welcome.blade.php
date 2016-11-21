@@ -79,16 +79,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="/guru">Guru</a>
-                    <a href="/matpel">Mata Pelajaran</a>
-                    <a href="/jadwalpel">Jadwal Pelajaran</a>
-                    <a href="/kelas">Kelas</a>
-                    <a href="/jurusan">Jurusan</a>
-                    <a href="/jampel">Jam Pelajaran</a>
-                    <a href="/jabatan">Jabatan</a>
+                    <a href="/absenguru">DATA YANG DIGUNAKAN MERUPAKAN VIKTIF BELAKA, JIKA ADA KESAMAAN NAMA, TEMPAT, CERITA MERUPAKAN HAL YANG TIDAK DISENGAJA</a>
                 </div>
                 <div class="links">
-                    <a href="/absenguru">Absen Guru & Pegawai</a>
+                    <a href="/absenguru">MULAI</a>
                 </div>
             </div>
         </div>

@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 @if (count($errors) > 0)
     <ul>
         @foreach ($errors->all() as $error)
@@ -65,3 +69,5 @@ $jampelpil = $jadwalpel->jam_id;
 	<input type="hidden" name="_method" value="PUT">
 	<input type="submit" value="KIRIM">
 </form>
+
+@stop

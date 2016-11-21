@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 {{ Session::get('message') }}
 
 
@@ -21,3 +25,5 @@
     </form>
 	<hr>
 @endforeach
+
+@stop

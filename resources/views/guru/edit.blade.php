@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 <h3>Edit Data Guru</h3>
 
 
@@ -33,3 +37,5 @@
 	<input type="hidden" name="_method" value="PUT">
 	<input type="submit" value="KIRIM">
 </form>
+
+@stop

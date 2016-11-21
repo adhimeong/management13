@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 <h3>Detail Mata Pelajaran</h3>
 
 <a href="/matpel">kembali</a>
@@ -11,3 +15,5 @@
 @else
 	Umum
 @endif
+
+@stop

@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 {{ Session::get('message') }}
 
 <a href="/">MENU UTAMA</a> <br>
@@ -28,3 +32,5 @@
 @endforeach
 
 {!! $matpel->links() !!}
+
+@stop

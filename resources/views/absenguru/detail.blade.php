@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 <h3>Detail absen Guru</h3>
 
 <a href="/absenguru">kembali</a>
@@ -8,3 +12,5 @@
 <p>{{ $absenguru->jamdatang }}</p> <br>
 <p>{{ $absenguru->jampulang }}</p> <br>
 <p>{{ $absenguru->point }}</p> <br>
+
+@stop

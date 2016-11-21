@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 {{ Session::get('message') }}
 
 <a href="/">MENU UTAMA</a> <br>
@@ -17,3 +21,5 @@
     </form>
 	<hr>
 @endforeach
+
+@stop

@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 <h3>detail Kelas</h3>
 
 <a href="/kelas">Kembali</a> <br>
@@ -10,3 +14,5 @@
 	<input type="hidden" name="_method" value="DELETE">
 	<input type="submit" value="delete">
 </form>
+
+@stop

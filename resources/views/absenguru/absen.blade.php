@@ -1,3 +1,7 @@
+@extends('themes.template')
+
+@section('content')
+
 <h3>Detail absen Guru</h3>
 
 <a href="/absenguru">kembali</a>
@@ -18,3 +22,5 @@
     </form>
 
 <a href="/absenguru"><button>OK</button></a>
+
+@stop
