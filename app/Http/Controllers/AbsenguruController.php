@@ -43,6 +43,9 @@ class AbsenguruController extends Controller
      */
     public function store(Request $request)
     {
+        //set time zone
+        date_default_timezone_set("Asia/Bangkok");
+        
         $this->validate($request, [
             'guru' => 'required',
         ]);
@@ -57,8 +60,6 @@ class AbsenguruController extends Controller
         //ngitung point
         list($keterangan,$jml_jam,$sisamenit3,$poin)= self::prosesabsensi($jadwaldatang,$jam_datang);
 
-        //set time zone
-        date_default_timezone_set("Asia/Bangkok");
         //save database
         $absenguru = new Absenguru;
         $absenguru->tanggal = date('y-m-d');
@@ -141,7 +142,7 @@ class AbsenguruController extends Controller
                 $sisamenit3=round($sisamenit2,0);
                 $jml_jam=$jam[0];
                 //untuk perhitungan poin
-                $nilaipoin=$totalmenit/30;
+                $nilaipoin=$totalmenit/45;
                 $poin=round(-$nilaipoin,0);     
             }else{
 
@@ -154,7 +155,7 @@ class AbsenguruController extends Controller
                 $sisamenit3=round($sisamenit2,0);
                 $jml_jam=$jam[0];
                 //untuk perhitungan poin
-                $nilaipoin=$totalmenit/30;
+                $nilaipoin=$totalmenit/45;
                 $poin=round($nilaipoin,0);
             }
 

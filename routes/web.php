@@ -24,6 +24,7 @@ Route::resource('jampel', 'JampelController');
 Route::resource('jadwalpel', 'JadwalpelController');
 Route::resource('jabatan', 'JabatanController');
 Route::resource('absenguru', 'AbsenguruController');
+Route::resource('perijinan', 'PerijinanController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

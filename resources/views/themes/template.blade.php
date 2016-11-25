@@ -25,7 +25,7 @@
             <nav class="navbar light-blue darken-2">
                 <div class="nav-wrapper">
                     <ul class="left">                      
-                      <li ><div class="logo-wrapper" ><span class="brand-logo" style="font-style: bold; font-size: 22px;">SMKN 13 BANDUNG</span></div></li>
+                      <li ><a href="/"><div class="logo-wrapper" ><span class="brand-logo" style="font-style: bold; font-size: 22px;">SMKN 13 BANDUNG</span></div></a></li>
                     </ul>
                     <div class="header-search-wrapper hide-on-med-and-down">
                         <i class="mdi-action-search"></i>
@@ -49,7 +49,7 @@
       <aside id="left-sidebar-nav">
         <ul id="slide-out" class="side-nav fixed leftside-navigation">
 
-            <li class="user-details red ">
+            <li class="user-details blue lighten-1">
             <div class="row">
                 <div class="col col s4 m4 l4">
                     <img src="{{ asset('images/avatar.jpg ')}}" alt="" class="circle responsive-img valign profile-image">
@@ -70,6 +70,8 @@
             <li class="bold"><a href="/absenguru" class="waves-effect waves-cyan"><i class="mdi-action-alarm"></i> Absensi Guru</a>
             </li>
             <li class="bold"><a href="/jadwalpel" class="waves-effect waves-cyan"><i class="mdi-action-event"></i> Jadwal Pelajaran</a>
+            </li>
+            <li class="bold"><a href="/perijinan" class="waves-effect waves-cyan"><i class="mdi-hardware-security"></i> Perijinan & Tugas Dinas</a>
             </li>
             <li class="bold"><a href="/jabatan" class="waves-effect waves-cyan"><i class="mdi-notification-play-install"></i> Jabatan</a>
             </li>
@@ -122,22 +124,20 @@
 
   <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-  <!-- START FOOTER -->
+  <!-- START FOOTER <--><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="page-footer light-blue darken-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">SMKN 13 BANDUNG</h5>
+          <h6 class="white-text">SMKN 13 BANDUNG</h6>
           <p class="grey-text text-lighten-4">Sekolah Menengah Kejuruan Negeri 13 Bandung adalah sekolah tingkat menengah yang mendidik siswanya untuk memiliki keahlian di bidang Analisis Kimia, Teknik Komputer Jaringan dan Rekayasa Perangkat Lunak.</p>
-
-
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Alamat</h5>
+          <h6 class="white-text">Alamat</h6>
           <p class="grey-text text-lighten-4">Jl. Soekarno Hatta No.Km.10, Jatisari, Buahbatu, Kota Bandung, Jawa Barat 40286</p>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Kontak</h5>
+          <h6 class="white-text">Kontak</h6>
           <ul>
             <li><p class="grey-text text-lighten-4">(022) 7318960</p></li>
             <li><p class="grey-text text-lighten-4">admin@smkn-13bdg.sch.id</p></li>
